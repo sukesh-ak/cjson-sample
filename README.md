@@ -1,34 +1,50 @@
-# cJSON Library Sample in C
-Quick sample of using cJSON Library in C.
+# cJSON based ConfigHelper Library in C++
+Simple cJSON based ConfigHelper Library in C++ for IoT needs.
 
 ```make
-# compile using gcc on Linux
-gcc main.c cjson/cJSON.c -o jsontest
-./jsontest
+# compile using g++ on Linux
+g++ main.cpp cjson/cJSON.c ConfigHelper/ConfigHelper.cpp -o jsonconfig
+./jsonconfig
 ```
 
 ## Output
 ```bash
+
+::******************* Saving json
+
 {
-        "devicename":   "sukesh",
+        "devicename":   "MYDEVICE",
         "settings":     {
                 "brightness":   128,
                 "theme":        "dark",
                 "timezone":     "+5:30",
-                "weather":      "bangalore,india"
+                "weather":      "bangalore, India"
         }
 }
-Brightness value: 128
-After update
+
+::******************* Loading json
 {
-        "devicename":   "sukesh",
+        "devicename":   "MYDEVICE",
+        "settings":     {
+                "brightness":   128,
+                "theme":        "dark",
+                "timezone":     "+5:30",
+                "weather":      "bangalore, India"
+        }
+}
+
+::******************* Saving json
+
+{
+        "devicename":   "ESP32-TUX",
         "settings":     {
                 "brightness":   250,
-                "theme":        "light",
+                "theme":        "dark",
                 "timezone":     "+5:30",
-                "weather":      "bangalore,india"
+                "weather":      "bangalore, India"
         }
 }
+
 ```
 
 ## Credits
